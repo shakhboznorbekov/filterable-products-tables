@@ -1,17 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import FilterableProductTable from "./filterableProductTable";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const PRODUCTS = [
+  { price: "$3.10", stocked: true, name: "Shaftoli" },
+  { price: "$3.40", stocked: true, name: "Banan" },
+  { price: "$1.80", stocked: false, name: "Nok" },
+  { price: "$2.00", stocked: true, name: "Sut" },
+  { price: "$1.50", stocked: false, name: "Olma Sharbati" },
+  { price: "$0.30", stocked: true, name: "Mineral Suv" },
+];
+ReactDOM.render(
+  <FilterableProductTable products={PRODUCTS} />,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
