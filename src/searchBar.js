@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-class SearchBar extends Component {
+import React, { PureComponent } from "react";
+class SearchBar extends PureComponent {
   handleFilterTextChange = (e) => {
     this.props.onFilterTextChange(e.target.value);
   };
